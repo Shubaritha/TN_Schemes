@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Nadu Government Schemes Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row min-vh-100">
+            <!-- Sidebar -->
+            <div class="col-md-3 sidebar p-0">
+                <div class="d-flex flex-column h-100">
+                    <div class="sidebar-header p-3">
+                        <h3>TN Schemes Chatbot</h3>
+                        <p class="text-muted">Get information about government schemes in Tamil Nadu</p>
+                    </div>
+                    <div class="sidebar-content p-3 flex-grow-1">
+                        <h5>Quick Suggestions</h5>
+                        <div class="suggestions">
+                            <button class="suggestion-btn" data-query="List all schemes">List all schemes</button>
+                            <button class="suggestion-btn" data-query="Education schemes">Education schemes</button>
+                            <button class="suggestion-btn" data-query="Health schemes">Health schemes</button>
+                            <button class="suggestion-btn" data-query="Schemes for women">Schemes for women</button>
+                            <button class="suggestion-btn" data-query="Agriculture schemes">Agriculture schemes</button>
+                            <button class="suggestion-btn" data-query="Housing schemes">Housing schemes</button>
+                        </div>
+                    </div>
+                    <div class="sidebar-footer p-3">
+                        <p class="text-center mb-0">&copy; 2023 TN Schemes Chatbot</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main chat area -->
+            <div class="col-md-9 chat-area p-0">
+                <div class="chat-container d-flex flex-column h-100">
+                    <div class="chat-header p-3 shadow-sm">
+                        <h4>Tamil Nadu Government Schemes Assistant</h4>
+                    </div>
+                    <div class="messages flex-grow-1 p-3" id="messages">
+                        <div class="message bot-message">
+                            <div class="message-content">
+                                <p>Welcome to the Tamil Nadu Government Schemes Chatbot! How can I help you today?</p>
+                                <p>You can ask me about various government schemes in Tamil Nadu, or click on one of the suggestions on the left.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-container p-3 shadow-sm">
+                        <form id="chat-form" class="d-flex">
+                            <input type="text" id="user-input" class="form-control me-2" placeholder="Type your message here...">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
